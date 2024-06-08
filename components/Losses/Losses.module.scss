@@ -1,0 +1,23 @@
+.losses {
+  list-style: none;
+  box-shadow: 0 0 5px 1px gold;
+  
+  &__item {
+    display: inline;
+    margin: 0;
+  }
+
+  &--column {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    border: none;
+    box-shadow: none;
+
+    &--extra-change {
+      justify-content: center;
+
+    }
+  }
+}

@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'FamiliadaFont'; /* dowolna nazwa, którą chcesz użyć do odwoływania się do tej czcionki */
+  src: url('../scss/fonts/BPdotsUnicaseBold.otf') format('opentype'), /* ścieżka do pliku czcionki w Twoim projekcie */
+       url('../scss/fonts/BPdotsUnicaseBold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}

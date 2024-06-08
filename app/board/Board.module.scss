@@ -1,0 +1,201 @@
+@font-face {
+  font-family: 'FamiliadaFont';
+  /* dowolna nazwa, którą chcesz użyć do odwoływania się do tej czcionki */
+  src: url('../../scss/fonts/BPdotsUnicaseBold.otf') format('opentype'),
+    /* ścieżka do pliku czcionki w Twoim projekcie */
+    url('../../scss/fonts/BPdotsUnicase.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.board-main {
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  background-color: #000;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  color: gold;
+  font-size: 40px;
+  text-transform: uppercase;
+  min-height: 100vh;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  font-family: FamiliadaFont, sans-serif;
+
+  .team {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 300px;
+
+    &__red {
+      background-color: tomato;
+    }
+
+    &__points {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: auto;
+      font-size: 2em;
+    }
+
+    &__name {
+      position: relative;
+      width: 100%;
+      font-size: 3rem;
+      font-weight: 500;
+      word-wrap: break-word;
+    }
+
+    .losses {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: stretch;
+      height: 100%;
+      gap: 56px;
+    }
+  }
+
+  .board {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px;
+    gap: 24px;
+
+    &__points {
+      font-size: 2em;
+    }
+
+    &__answers {
+      width: 1000px;
+      font-size: 1.3em;
+      letter-spacing: 0.3em;
+      list-style: none;
+      width: 100%;
+      height: auto;
+      text-align: left;
+    }
+
+    &__sum {
+      font-size: 24px;
+
+      &-points {
+        display: flex;
+        justify-content: flex-end;
+        text-align: center;
+        font-size: 1.5em;
+        margin-right: 24px;
+
+        &-text {
+          width: 1000px;
+          display: flex;
+          align-items: center;
+          margin-right: 24px;
+          font-size: 1.025em;
+        }
+
+        &-score {
+          font-size: 1em;
+          font-weight: 400;
+        }
+      }
+
+    }
+
+    &__question {
+      position: absolute;
+      font-size: 30px;
+      left: 0;
+      right: 0;
+      bottom: 60px;
+    }
+
+    &__answer {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      position: relative;
+      height: 84px;
+      padding: 16px;
+      font-size: 1.3em;
+
+      &-number {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
+        width: 30px;
+        margin-right: 72px;
+      }
+
+      &-text {
+        display: flex;
+        align-items: baseline;
+        flex: 1;
+        font-size: 0.5em;
+        height: 48px;
+        margin: 0 24px 0 0;
+
+        &--hidden {
+          border-bottom: 3px dotted gold;
+          flex: 1;
+          margin: 0 24px 0 0;
+          height: 48px;
+        }
+      }
+
+      &-points {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        width: 70px;
+        margin-right: 24px;
+
+        span {
+          width: 30px;
+          height: 12px;
+          background-color: gold;
+        }
+      }
+    }
+  }
+}
+
+.wellcome {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: #000;
+  height: 100vh;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: FamiliadaFont, sans-serif;
+
+  &__text {
+    color: gold;
+    font-size: 25rem;
+    text-transform: uppercase;
+    letter-spacing: 40px;
+  }
+}
+
+.team__losses-wrapper {
+  height: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+}

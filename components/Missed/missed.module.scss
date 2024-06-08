@@ -1,0 +1,36 @@
+.missed {
+  background: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  color: gold;
+  
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:disabled {
+    background-color: #fff;
+    color: gray;
+    transform: scale(1);
+  }
+  
+}
+
+.missed[disabled] {
+  &:disabled {
+    background-color: #fff;
+    color: gray;
+    transform: scale(1);
+    cursor: no-drop;
+  }
+}
+
+.readOnly {
+  background: none;
+  border: none;
+  cursor: auto;
+
+  &:hover {
+    transform: scale(1);
+  }
+}
