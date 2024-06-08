@@ -13,7 +13,6 @@ export const Wellcome = ({ introMusic }: { introMusic: boolean }) => {
   const spaceLetter = `${widthDiv / 500}px`;
 
   const [introPlay, { stop: introStop }] = useSound(introSound);
-  console.log('intro-music', introMusic);
 
   React.useEffect(() => {
     if (introMusic) {

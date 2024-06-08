@@ -99,6 +99,7 @@ const Board = () => {
 
   React.useEffect(() => {
     if (message) {
+      console.log('message.board.introMusic', message.board.introMusic);
       setTestBoard({
         answers: message.board.currentQuestion.answers,
         id: message.board.currentQuestion.id,
